@@ -5,7 +5,11 @@ from app.utils import load_yaml_config, generate_logs_from_config
 class TestUtils(unittest.TestCase):
 
     def test_load_yaml_config(self):
-        config = load_yaml_config('config/logs_config.yml')
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        config_file_path = os.path.join(base_dir, 'config', 'example_logs_config.yml')
+        
+        config = load_yaml_config(config_file_path)
+        self.assertIsNotNone(config)
         self.assertIn('logs', config)
 
     def test_generate_logs_from_config(self):
