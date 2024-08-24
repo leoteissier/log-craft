@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="logcraft",
+    name="log-craft",
     version="0.1.0",
     author="Teissier Léo",
     author_email="leo.teissier@numericable.fr",
