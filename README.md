@@ -2,7 +2,7 @@
 
 
 [![pip version](https://badge.fury.io/py/log-crafter.svg)](https://badge.fury.io/py/log-crafter)
-[![Build Status](https://github.com/leoteissier/log-crafter/actions/workflows/ci.yml/badge.svg)](https://github.com/leoteissier/log-crafter/actions)
+[![Build Status](https://github.com/leoteissier/log-crafter/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/leoteissier/log-crafter/actions)
 
 
 LogCraft est une bibliothèque Python pour générer des fichiers de logs normaux et suspects. Elle est conçue pour simuler des environnements réels en créant des fichiers de logs diversifiés, utilisés notamment pour l'entraînement d'IA dans des systèmes de détection d'intrusion.
