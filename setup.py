@@ -14,11 +14,6 @@ setup(
         "pyyaml",
         "setuptools",
     ],
-    entry_points={
-        'console_scripts': [
-            'logcrafter-generate=app.cli:main',
-        ],
-    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

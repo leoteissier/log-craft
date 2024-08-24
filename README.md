@@ -5,30 +5,30 @@
 [![Build Status](https://github.com/leoteissier/log-crafter/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/leoteissier/log-crafter/actions)
 
 
-LogCraft est une bibliothèque Python pour générer des fichiers de logs normaux et suspects. Elle est conçue pour simuler des environnements réels en créant des fichiers de logs diversifiés, utilisés notamment pour l'entraînement d'IA dans des systèmes de détection d'intrusion.
+LogCrafter is a Python library designed to generate both normal and suspicious log files. It is built to simulate real-world environments by creating diverse log files, which can be particularly useful for training AI in intrusion detection systems.
 
-## Fonctionnalités
+## Features
 
-- Génération de logs d'authentification (auth.log)
-- Génération de logs de syslog (syslog.log)
-- Génération de logs d'échec d'authentification (failed_auth.log)
-- Génération de logs d'escalade de privilèges, d'injection SQL, de phishing, et d'attaque DDoS
-- Configuration via un fichier YAML pour spécifier le type de log, le fichier de sortie, et le nombre de logs à générer
+- Generation of authentication logs (auth.log)
+- Generation of syslog logs (syslog.log)
+- Generation of failed authentication logs (failed_auth.log)
+- Generation of logs for privilege escalation, SQL injection, phishing, and DDoS attacks
+- Configuration via a YAML file to specify the type of log, output file, and number of logs to generate
 
 ## Installation
-
-Vous pouvez installer LogCraft directement depuis PyPI (à venir) ou en clonant ce dépôt.
+You can install LogCrafter directly from PyPI (coming soon) or by cloning this repository.
 
 ```bash
-pip install logcraft
+pip install logcrafter
 ```
-## Utilisation
+
+## Usage
 
 ### Configuration
 
-Créez un fichier de configuration YAML, par exemple logs_config.yml :
+Create a YAML configuration file, such as logs_config.yml, to specify the types of logs you want to generate:
 
-```yml
+```yaml
 logs:
   - type: "auth"
     output_file: "./logs/auth.log"
@@ -38,10 +38,75 @@ logs:
     output_file: "./logs/failed_auth.log"
     log_count: 100
 ```
-## Génération de Logs
 
-Utilisez le module CLI pour générer des logs basés sur votre fichier de configuration :
+### Generating Logs
+
+Use the LogCrafter CLI to generate logs based on your configuration file:
 
 ```bash
 python -m app.main config/logs_config.yml
 ```
+
+### Example Log Configuration
+
+Below is an example of a more comprehensive YAML configuration file to showcase the different types of logs that LogCrafter can generate:
+
+```yaml
+logs:
+  - type: "auth"
+    output_file: "./logs/auth.log"
+    log_count: 1000
+
+  - type: "syslog"
+    output_file: "./logs/syslog.log"
+    log_count: 1000
+
+  - type: "failed_auth"
+    output_file: "./logs/failed_auth.log"
+    log_count: 500
+
+  - type: "privilege_escalation"
+    output_file: "./logs/privilege_escalation.log"
+    log_count: 200
+
+  - type: "sql_injection"
+    output_file: "./logs/sql_injection.log"
+    log_count: 300
+
+  - type: "phishing"
+    output_file: "./logs/phishing.log"
+    log_count: 150
+
+  - type: "ddos"
+    output_file: "./logs/ddos.log"
+    log_count: 400
+```
+
+### Running Tests
+
+To ensure that everything is working correctly, run the included unit tests:
+
+```bash
+python3 -m unittest discover -s tests -p 'test_*.py'
+```
+
+### Contributing
+
+Contributions are welcome! If you'd like to contribute to LogCrafter, please follow these steps:
+
+- Fork the repository.
+- Create a new branch (git checkout -b feature-branch-name).
+- Make your changes and commit them (git commit -m 'Add new feature').
+Push to the branch (git push origin feature-branch-name).
+- Open a pull request.
+
+### Troubleshooting
+
+- No logs generated: Ensure your YAML configuration file is correctly formatted and that paths are correct.
+- Missing dependencies: Install required dependencies using pip install -r requirements.txt.
+- Permission issues: Run the script with appropriate permissions if writing to system directories.
+
+### License
+
+LogCrafter is open-source software licensed under the MIT License.
+
