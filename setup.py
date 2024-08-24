@@ -16,7 +16,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'logcraft-generate=app.cli:main',
+            'logcrafter-generate=app.cli:main',
         ],
     },
     classifiers=[
