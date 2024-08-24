@@ -1,4 +1,4 @@
-# LogCraft
+# LogCrafter
 
 LogCraft est une bibliothèque Python pour générer des fichiers de logs normaux et suspects. Elle est conçue pour simuler des environnements réels en créant des fichiers de logs diversifiés, utilisés notamment pour l'entraînement d'IA dans des systèmes de détection d'intrusion.
 
