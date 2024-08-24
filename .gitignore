@@ -1,0 +1,48 @@
+# Environnements virtuels
+venv/
+.env/
+*.env
+
+# Fichiers de configuration de l'environnement
+*.envrc
+
+# Fichiers de log
+logs/
+*.log
+
+# Dépendances et artefacts Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.eggs/
+*.dist-info/
+build/
+dist/
+
+# Fichiers de l'IDE
+.idea/
+.vscode/
+*.swp
+
+# Fichiers de Jupyter Notebook
+.ipynb_checkpoints/
+
+# Fichiers de couverture de test
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache/
+
+# Dossiers de distribution
+wheelhouse/
+pip-wheel-metadata/
+*.egg
+*.manifest
+
+# Fichiers de docker
+*.dockerfile
+
+# GitHub Actions workflows temporaires
+.github/workflows/*.yml~

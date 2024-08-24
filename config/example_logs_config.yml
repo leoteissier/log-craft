@@ -1,0 +1,40 @@
+logs:
+  - type: "auth"
+    output_file: "./logs/auth.log"
+    log_count: 1000
+
+  - type: "syslog"
+    output_file: "./logs/syslog.log"
+    log_count: 1000
+
+  - type: "kern"
+    output_file: "./logs/kern.log"
+    log_count: 1000
+
+  - type: "daemon"
+    output_file: "./logs/daemon.log"
+    log_count: 1000
+
+  - type: "fail2ban"
+    output_file: "./logs/fail2ban.log"
+    log_count: 1000
+
+  - type: "failed_auth"
+    output_file: "./logs/failed_auth.log"
+    log_count: 1000
+
+  - type: "privilege_escalation"
+    output_file: "./logs/privilege_escalation.log"
+    log_count: 1000
+
+  - type: "sql_injection"
+    output_file: "./logs/sql_injection.log"
+    log_count: 1000
+
+  - type: "phishing"
+    output_file: "./logs/phishing.log"
+    log_count: 1000
+
+  - type: "ddos"
+    output_file: "./logs/ddos.log"
+    log_count: 1000
